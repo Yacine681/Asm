@@ -5,6 +5,6 @@
 #include <string.h>
 
 size_t ft_strlen(char *);
-char *ft_strcpy(char *, char *);
+char *ft_strcpy(char *, const char *);
 
 #endif
