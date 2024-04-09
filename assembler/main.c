@@ -2,9 +2,12 @@
 
 int main()
 {
-    char str1[] = "bonjour";
-    char str2[] = "hellooooooooo";
+    char str1[] = "xyz";
+    char str2[] = "xy";
 
     printf("ft_strlen==%ld\n", ft_strlen("hello world!"));
-    printf("ft_strcpy==%s\n", ft_strcpy(str1, str2));
+    // printf("ft_strcpy==%s\n", ft_strcpy(str1, str2));
+    // printf("ft_strcpy==%s\n", strcpy(str1, str2));
+    printf("ft_strcmp==%d\n", ft_strcmp(str1, str2));
+    printf("strcmp==%d\n", strcmp(str1, str2));
 }

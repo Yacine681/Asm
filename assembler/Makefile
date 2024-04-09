@@ -1,4 +1,4 @@
-SRCS = ft_strlen.s ft_strcpy.s
+SRCS = ft_strlen.s ft_strcpy.s ft_strcmp.s
 
 OBJS = $(SRCS:.s=.o)
 
@@ -15,17 +15,13 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	@ar -rc $(NAME) $(OBJS)
-	@echo "$(NAME) was created !"
 
 clean:
 	@rm -rf $(OBJS)
-	@rm -rf test.o
 
 fclean: clean
 	@rm -rf $(NAME)
-	@echo "$(NAME) was deleted !"
-	@rm -rf test 
-	@echo "test was deleted !"
+	@rm -rf a.out
 
 test: $(NAME) $(OBJS)
 	@clang  -o test main.c $(NAME) -lc 
