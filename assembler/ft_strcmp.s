@@ -2,12 +2,12 @@ section .text
     global ft_strcmp
 
 ft_strcmp:
-    xor rcx, 0
-    xor rbx, 0
+    mov rcx, 0
+    mov rbx, 0
 
-    loop:
-    mov al, byte [rdi + rcx]
-    mov bl, byte [rsi + rcx]
+loop:
+    mov al, [rdi + rcx]
+    mov bl, [rsi + rcx]
     cmp al, 0
     je endloop
     cmp bl, 0
@@ -16,8 +16,7 @@ ft_strcmp:
     jne endloop
     inc rcx
     jmp loop
-
-    endloop:
+endloop:
     movzx rax, al
     movzx r8, bl
     sub rax, r8

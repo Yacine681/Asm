@@ -3,7 +3,6 @@ section .text
 
 ft_strcpy:
     mov rax, 0
-    jmp cpy
 
 cpy:
     cmp byte [rsi + rax],0

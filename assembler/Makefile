@@ -21,7 +21,7 @@ clean:
 
 fclean: clean
 	@rm -rf $(NAME)
-	@rm -rf a.out
+	@rm -rf test
 
 test: $(NAME) $(OBJS)
 	@clang  -o test main.c $(NAME) -lc 

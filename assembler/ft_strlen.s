@@ -3,7 +3,6 @@ section .text
 
 ft_strlen:
     mov rax, 0
-    jmp loop_count
 
 loop_count:
     cmp byte [rdi + rax], 0
