@@ -3,7 +3,6 @@ section .text
 
 ft_strcmp:
     mov rcx, 0
-    mov rbx, 0
 
 loop:
     mov al, [rdi + rcx]
