@@ -38,4 +38,6 @@ int main()
 
     printf("Bytes ft_read: %zd\n", bytes_ft_read);
     printf("Bytes read: %zd\n", bytes_read);
+
+    printf("ft_strdup====%s\n", ft_strdup("Bonjour!!!!"));
 }
