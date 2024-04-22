@@ -43,7 +43,7 @@ int main()
     printf("=== ft_strcmp ===\n");
 
     printf("%d\n", ft_strcmp("Bonjour", "Bonjour"));
-    printf("%d\n", ft_strcmp("Bonjour", "Bonsoir"));
+    printf("%d\n", ft_strcmp("Bonjour", "Arbre"));
     printf("%d\n", ft_strcmp("", ""));
     printf("%d\n", ft_strcmp("Ab", "Ac"));
     printf("%d\n", ft_strcmp("!@#$%^&*()", "!@#$%^&*()"));
@@ -51,7 +51,7 @@ int main()
     printf("=== strcmp ===\n");
 
     printf("%d\n", strcmp("Bonjour", "Bonjour"));
-    printf("%d\n", strcmp("Bonjour", "Bonsoir"));
+    printf("%d\n", strcmp("Bonjour", "Arbre"));
     printf("%d\n", strcmp("", ""));
     printf("%d\n", strcmp("Ab", "Ac"));
     printf("%d\n", strcmp("!@#$%^&*()", "!@#$%^&*()"));
@@ -100,7 +100,7 @@ int main()
 
     printf("Test 1: %s\n", ft_strdup("Bonjour, monde!"));
     printf("Test 2: %s\n", ft_strdup(""));
-    printf("Test 4: %s\n", ft_strdup("Allocation dynamique"));
+    printf("Test 4: %s\n", ft_strdup("hello      world     !"));
     printf("Test 5: %s\n", ft_strdup("!@#$%^&*()"));
     printf("Test 6: %s\n", ft_strdup("   Espaces   "));
     printf("Test 7: %s\n", ft_strdup("1234567890"));
@@ -112,7 +112,7 @@ int main()
 
     printf("Test 1: %s\n", strdup("Bonjour, monde!"));
     printf("Test 2: %s\n", strdup(""));
-    printf("Test 4: %s\n", strdup("Allocation dynamique"));
+    printf("Test 4: %s\n", strdup("hello      world     !"));
     printf("Test 5: %s\n", strdup("!@#$%^&*()"));
     printf("Test 6: %s\n", strdup("   Espaces   "));
     printf("Test 7: %s\n", strdup("1234567890"));
