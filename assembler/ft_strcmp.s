@@ -1,19 +1,21 @@
 global ft_strcmp
-
 ft_strcmp:
     mov rcx, 0
-
 loop:
     mov al, [rdi + rcx]
     mov bl, [rsi + rcx]
-    cmp al, 0
-    je endloop
-    cmp bl, 0
-    je endloop
+    test al, al
+    jz exit 
+    test bl, bl
+    jz exit
     cmp al, bl
     jne endloop
     inc rcx
     jmp loop
+    
+exit:
+    mov rax, -1
+    ret
 endloop:
     movzx rax, al
     movzx r8, bl
