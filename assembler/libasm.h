@@ -6,11 +6,11 @@
 #include <unistd.h>
 #include <fcntl.h>
 
-size_t ft_strlen(char *);
-char *ft_strcpy(char *, const char *);
-int ft_strcmp(const char *, const char *);
-ssize_t ft_write(int, const void *, size_t);
+int     ft_strcmp(const char *, const char *);
+char    *ft_strdup(const char *);
+char    *ft_strcpy(char *, const char *);
 ssize_t ft_read(int, void *, size_t );
-char *ft_strdup(const char *);
+ssize_t ft_write(int, const void *, size_t);
+size_t  ft_strlen(char *);
 
 #endif
