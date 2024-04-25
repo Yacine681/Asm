@@ -40,21 +40,57 @@ int main()
     // printf("%s\n", strcpy(str4, "!@#$%^&*()"));
     // printf("%s\n", strcpy(str5, "Cinq mots ici"));
 
-    printf("=== ft_strcmp ===\n");
+    printf("sbfsbfjbsdfs\n");
 
     printf("%d\n", ft_strcmp("Bonjour", "Bonjour"));
     printf("%d\n", ft_strcmp("Bonjour", "Arbre"));
     printf("%d\n", ft_strcmp("", ""));
-    printf("%d\n", ft_strcmp("Ab", "Ac"));
+    printf("%d\n", ft_strcmp("lol", ""));
     printf("%d\n", ft_strcmp("!@#$%^&*()", "!@#$%^&*()"));
 
-    printf("=== strcmp ===\n");
+    printf("test\n");
 
     printf("%d\n", strcmp("Bonjour", "Bonjour"));
     printf("%d\n", strcmp("Bonjour", "Arbre"));
-    printf("%d\n", strcmp("", "test"));
-    printf("%d\n", strcmp("Ab", "Ac"));
+    printf("%d\n", strcmp("", ""));
+    printf("%d\n", strcmp("lol", ""));
     printf("%d\n", strcmp("!@#$%^&*()", "!@#$%^&*()"));
+
+     const char *str1[10] = {
+        "abc",
+        "abcdefg",
+        "abcdefgh",
+        "abc\0defg",
+        "abc",
+        "a",
+        "abc",
+        "",
+        "123894984844448484846546545456486486466846666666666666666666666666666846848648646848646",
+        "xyz"
+    };
+
+    const char *str2[10] = {
+        "abc",
+        "abcdefg",
+        "abc",
+        "abc",
+        "abcd",
+        "a",
+        "",
+        "",
+        "12346848484846846846468888888888888888888888888888888888888646464654564545646545446445",
+        "xyzz"
+    };
+
+    printf("=== ft_strcmp ===\n");
+
+    for (int i = 0; i < 10; ++i)
+        printf("%d\n", ft_strcmp(str1[i], str2[i]));
+
+    printf("=== strcmp ===\n");
+
+    for (int l = 0; l < 10; ++l)
+        printf("%d\n", strcmp(str1[l], str2[l]));
 
     // printf("=== ft_write ===\n");
 
