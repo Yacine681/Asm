@@ -1,4 +1,6 @@
 global ft_read
+extern	__errno_location
+
 ft_read:
     mov rax, 0
     syscall
@@ -6,5 +8,9 @@ ft_read:
     jl error 
     ret
 error:
-    mov rax, -1
-    ret
+    neg		rax			
+	mov		rdi, rax		
+	call	__errno_location	
+	mov		[rax], rdi		
+	mov		rax, -1			
+	ret	 

@@ -1,10 +1,25 @@
 global ft_write
+extern	__errno_location
 ft_write:
-    mov rax, 1
+    cmp rsi, 0
+    je bad_buff
+    mov eax, 1
     syscall
-    cmp rax, 0
-    jl error 
+    test rax, rax
+    js error
     ret
-error:
+
+bad_buff:
+    mov rdx, 22
+    call __errno_location
+    mov [rax], rdx
     mov rax, -1
     ret
+
+error:
+	mov		rdx, rax		
+	call	__errno_location	
+    neg		rdx			
+	mov		[rax], 	rdx
+	mov		rax, -1			
+	ret	

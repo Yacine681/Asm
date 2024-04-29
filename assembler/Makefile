@@ -24,7 +24,7 @@ fclean: clean
 	@rm -rf test
 
 test: $(NAME) $(OBJS)
-	@clang  -o test main.c $(FLAGS) $(NAME) -lc 
+	@clang  -o test main.c $(FLAGS) $(NAME)
 
 re: fclean all
 

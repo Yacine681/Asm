@@ -10,5 +10,6 @@ cpy:
     jmp cpy
 exit:
     mov cl, 0
+    mov [rdi + rax], cl
     mov rax, rdi
     ret
